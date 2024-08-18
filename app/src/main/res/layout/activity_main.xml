@@ -5,15 +5,163 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".MainActivity"
+    android:background="@color/MineShaft">
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/task_statue"
+        android:orientation="horizontal"
+        >
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@mipmap/todolisticon"
+    />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/Todo"
+        android:textColor="@color/white"
+        android:textStyle="bold|italic"
+        android:fontFamily="serif"
+    android:textSize="@dimen/_27sdp"
+        android:paddingTop="@dimen/_22sdp"
 
+        />
+    </LinearLayout>
+<LinearLayout
+    android:id="@+id/task_statue"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/title_layout"
+    android:orientation="horizontal"
+    android:weightSum="3"
+    >
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:orientation="horizontal"
+      android:background="@drawable/border"
+      android:layout_marginEnd="@dimen/_5sdp"
+      >
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+android:layout_marginTop="@dimen/_2sdp"
+          android:text="@string/TodoListButton"
+          android:textStyle="bold|italic"
+          android:fontFamily="serif"
+          android:textSize="@dimen/_13sdp"
+          android:background="@android:color/transparent"
+          android:layout_marginEnd="@dimen/_1sdp"
+          android:paddingStart="@dimen/_1sdp"
+          android:paddingEnd="@dimen/_1sdp"
+
+          />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/to_do_background"
+          android:text="0"
+          android:textStyle="bold|italic"
+          android:fontFamily="serif"
+          android:textSize="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+          android:layout_marginBottom="@dimen/_15sdp"
+          android:layout_marginRight="@dimen/_8sdp"
+          android:paddingLeft="@dimen/_5sdp"
+          android:paddingRight="@dimen/_5sdp"
+          />
+  </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginEnd="@dimen/_5sdp"
+
+        android:background="@drawable/border"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="@string/completedButton"
+            android:textStyle="bold|italic"
+            android:fontFamily="serif"
+            android:textSize="@dimen/_13sdp"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:paddingStart="@dimen/_6sdp"
+            android:paddingEnd="@dimen/_1sdp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/completed_background"
+            android:text="0"
+            android:textStyle="bold|italic"
+            android:fontFamily="serif"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="@drawable/border"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="@string/OnHoldListButton"
+            android:textStyle="bold|italic"
+            android:fontFamily="serif"
+            android:textSize="@dimen/_13sdp"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="@dimen/_1sdp"
+            android:paddingStart="@dimen/_1sdp"
+            android:paddingEnd="@dimen/_1sdp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/on_hold_background"
+            android:text="0"
+            android:textStyle="bold|italic"
+            android:fontFamily="serif"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_1sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            />
+    </LinearLayout>
+</LinearLayout>
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/task_statue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
+

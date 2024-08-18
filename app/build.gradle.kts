@@ -45,4 +45,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    // SDP implementation
+    implementation("com.intuit.sdp:sdp-android:1.1.0")
+
+    // SSP implementation
+    implementation("com.intuit.ssp:ssp-android:1.1.0")
 }

@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="MineShaft">#333333</color>
+    <color name="Portage">#9a97f7</color>
+    <color name="PastelGreen">#77d46e</color>
+    <color name="Porsche">#efba64</color>
 </resources>

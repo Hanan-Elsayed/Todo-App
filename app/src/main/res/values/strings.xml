@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TodoApp</string>
+    <string name="Todo">To Do List</string>
+    <string name="TodoListButton">To Do</string>
+    <string name="completedButton">Completed</string>
+    <string name="OnHoldListButton">On Hold</string>
+
 </resources>
